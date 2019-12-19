@@ -5,8 +5,8 @@ admin_path:
 webhook_url: 
 sections:
 - type: directory
-  path: contact.html
-  label: Contact
+  path: index.html
+  label: Home
   create: all
   match: "**/*"
 - type: directory
@@ -15,8 +15,8 @@ sections:
   create: all
   match: "**/*"
 - type: directory
-  path: index.html
-  label: Home
+  path: contact.html
+  label: Contact
   create: all
   match: "**/*"
 upload_dir: uploads
