@@ -4,21 +4,32 @@ auto_deploy: false
 admin_path: admin
 webhook_url: 
 sections:
-- type: directory
+- type: document
   path: index.html
   label: Home
-  create: all
-  match: "**/*"
-- type: directory
+  templates:
+  - settings
+  - type: directory
   path: about.html
   label: About
   create: all
-  match: "**/*"
+  match: "**/[!index]*"
+  templates:
+  - about
 - type: directory
   path: contact.html
   label: Contact
   create: all
   match: "**/*"
+  templates:
+  - contact
+  - type: directory
+  path: bookdetails.html
+  label: bookdetails
+  create: all
+  match: "**/*"
+  templates:
+  - bookdetails
 upload_dir: assets/images
 public_path: "/images"
 front_matter_path: ''
